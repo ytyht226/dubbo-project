@@ -114,8 +114,7 @@ ServiceBean.onApplicationEvent
 	                            -->createRegistry(url)
 	                              -->new ZookeeperRegistry(url, zookeeperTransporter)
 	                                -->AbstractRegistry
-	                                  -->loadProperties()//目的：把C:\Users\bobo\.dubbo\dubbo-registry-192.168.48.117.cache
-	                                                                                                                                                                    文件中的内容加载为properties
+	                                  -->loadProperties()//目的：把C:\Users\bobo\.dubbo\dubbo-registry-192.168.48.117.cache文件中的内容加载为properties
 	                                  -->notify(url.getBackupUrls())//不做任何事             
 	                                -->FailbackRegistry   
 	                                  -->retryExecutor.scheduleWithFixedDelay(new Runnable()//建立线程池，检测并连接注册中心,如果失败了就重连

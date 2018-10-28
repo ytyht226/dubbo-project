@@ -39,7 +39,7 @@ ReferenceBean.getObject()
                 -->proxyFactory.getProxy(invoker)
                   -->AbstractProxyFactory.getProxy
                     -->getProxy(invoker, interfaces)
-                      -->Proxy.getProxy(interfaces)//目前代理对象interface com.alibaba.dubbo.demo.DemoService, interface com.alibaba.dubbo.rpc.service.EchoService
+                      -->Proxy.getProxy(interfaces)//目标代理对象interface com.alibaba.dubbo.demo.DemoService, interface com.alibaba.dubbo.rpc.service.EchoService
                       -->InvokerInvocationHandler// 采用jdk自带的InvocationHandler，创建InvokerInvocationHandler对象。
 	                          
 	                          
