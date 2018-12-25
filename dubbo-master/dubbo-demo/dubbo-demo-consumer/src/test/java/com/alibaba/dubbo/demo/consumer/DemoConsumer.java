@@ -18,6 +18,7 @@ package com.alibaba.dubbo.demo.consumer;
 public class DemoConsumer {
 	
 	public static void main(String[] args) {
+		System.setProperty("sun.misc.ProxyGenerator.saveGeneratedFiles", "true");
 	    com.alibaba.dubbo.container.Main.main(args);
 	}
 

@@ -8,7 +8,8 @@ public class ProxyFactory$Adpative implements ProxyFactory {
         if (arg0.getUrl() == null)
             throw new IllegalArgumentException("com.alibaba.dubbo.rpc.Invoker argument getUrl() == null");
         com.alibaba.dubbo.common.URL url = arg0.getUrl();
-        String extName = url.getParameter("proxy", "javassist");
+        String extName = url.getParameter("proxy", "jdk");
+//        String extName = url.getParameter("proxy", "javassist");
         if (extName == null)
             throw new IllegalStateException("Fail to get extension(com.alibaba.dubbo.rpc.ProxyFactory) name from url(" + url.toString() + ") use keys([proxy])");
         ProxyFactory extension = (ProxyFactory) ExtensionLoader.getExtensionLoader(ProxyFactory.class).getExtension(extName);
